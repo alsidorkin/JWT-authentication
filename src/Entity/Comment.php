@@ -28,6 +28,11 @@ class Comment
     #[Groups(['comment:read'])]
     private ?\DateTimeInterface $createdAt = null;
 
+    public function __construct()
+{
+    $this->createdAt = new \DateTime();
+}
+
     public function getId(): ?int
     {
         return $this->id;
